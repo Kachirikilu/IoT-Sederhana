@@ -12,7 +12,6 @@
                     align-items: center;
                     height: 100vh;
                     margin: 0;
-                    /* background-color: #f4f7f9; */
                     background-color: #2c3e50;
                 }
                 .container {
@@ -127,22 +126,15 @@
         </div>
 
         <script>
-            const host = '126c86adb43647499d16e3385091d404.s1.eu.hivemq.cloud';
-            const port = 8884;
-            const username = 'wildan12';
-            const password = '12NoV2004@';
-            // const host = 'broker.mqttdashboard.com';
-            // const port = 8000;
+            const host = 'broker.mqttdashboard.com';
+            const port = 8000;
 
             // Topik MQTT
             const topicPubs = 'wildan12_lampu/kontrol'; // Topik untuk mengirim perintah
             const topicSubs = 'wildan12_lampu/status'; // Topik untuk menerima status
 
             // Inisialisasi klien MQTT
-            const client = mqtt.connect(`wss://${host}:${port}/mqtt`, {
-            // const client = mqtt.connect(`ws://${host}:${port}/mqtt`, {
-                // username: username,
-                // password: password,
+            const client = mqtt.connect(`ws://${host}:${port}/mqtt`, {
                 reconnectPeriod: 1000
             });
 
